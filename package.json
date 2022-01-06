@@ -1,0 +1,19 @@
+{
+  "name": "consulta-biblia",
+  "version": "1.0.0",
+  "description": "biblia sagrada para consultar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArcenioSouza/Consulta-Biblia.git"
+  },
+  "author": "Arcenio Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArcenioSouza/Consulta-Biblia/issues"
+  },
+  "homepage": "https://github.com/ArcenioSouza/Consulta-Biblia#readme"
+}
