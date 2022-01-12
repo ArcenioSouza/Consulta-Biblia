@@ -1,12 +1,12 @@
 import Header from './components/header/Header';
-import LeituraDiaria from './components/leituraDiaria/LeituraDiaria';
+import MensagemDiaria from './components/mensagem-diaria/MensagemDiaria';
 
 function App() {
   return (
-    <div>
+    <>
       <Header/>
-      <LeituraDiaria/>
-    </div>
+      <MensagemDiaria/>
+    </>
   );
 }
 

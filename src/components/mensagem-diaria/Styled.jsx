@@ -7,16 +7,25 @@ export const Container = styled.div `
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding: 5%;
+   padding: 2%;
    font-family: var(--fontText);
    background-color: #d9d9d9;
+   border-bottom: 2px solid;
+
+   div{
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      font-family: var(--fontSubtitle);
+   }
 
    h1{
-      font-size: 50px;
-      margin-bottom: 2%;
+      font-size: 45px;
+      margin: 2%;
    }
 
    p{
       font-size: 25px;
+      text-align: center;
    }
 `
