@@ -1,3 +1,5 @@
+import LivrosAT from './components/escolha-livro/LivrosAT';
+import LivrosNT from './components/escolha-livro/LivrosNT';
 import Header from './components/header/Header';
 import MensagemDiaria from './components/mensagem-diaria/MensagemDiaria';
 
@@ -6,6 +8,8 @@ function App() {
     <>
       <Header/>
       <MensagemDiaria/>
+      <LivrosAT/>
+      <LivrosNT/>
     </>
   );
 }
