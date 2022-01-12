@@ -2,9 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
 :root{
   --fontText: 'Merriweather', serif;
   --fontTitle: 'Island Moments', cursive;
+  --fontSubtitle: 'Amaranth', sans-serif;
 }
 
 *{

@@ -9,9 +9,14 @@ const LeituraDiaria = () => {
    useEffect(() => {
       api
          .get('verses/nvi/random')
-         .then((response) => setVersoDiario(response.data))
-         .catch(erro => console.error(erro))
+         .then((response) => {
+            console.log(response.data)
+            setVersoDiario(response.data)
+         })
+         .catch(erro => console.error("Requisição com erro "+erro))
    }, [])
+
+   console.log(versoDiario)
 
    return (
       <S.Container>
