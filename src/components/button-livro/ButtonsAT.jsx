@@ -11,8 +11,6 @@ const ButtonsAT = ({livros}) => {
          .get(`verses/nvi/${abbrev}/1`)
          .then(response => localStorage.setItem('clickLivro', JSON.stringify(response.data)))
          .catch(erro => console.error('Problema na requisição '+erro))
-      
-      
    }
    
    return (

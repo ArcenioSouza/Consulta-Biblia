@@ -1,20 +1,16 @@
-import { useEffect, useState } from 'react';
+
+
 import Header from '../../components/header/Header';
 
+import TelaLeitura from '../../components/tela-leitura/TelaLeitura';
+
 const Leitura = () => {
-
-   const [leitura, setLeitura] = useState()
-
-   useEffect(() => {
-      setLeitura(
-         JSON.parse(localStorage.getItem('clickLivro'))
-      )
-      console.log(leitura)
-   }, [])
-
+   
+   
    return (
       <>
          <Header/>
+         <TelaLeitura/>
       </>
    )
 }
