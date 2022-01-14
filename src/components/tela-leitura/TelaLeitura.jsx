@@ -55,9 +55,9 @@ const TelaLeitura = () => {
    return (
       <S.Container>
          {isLoading ? (
-            <>
+            <div id="loading">
                <Loading type="spin" color="#000" />
-            </>
+            </div>
          ) : (
             <>
                <div className="leitura">
