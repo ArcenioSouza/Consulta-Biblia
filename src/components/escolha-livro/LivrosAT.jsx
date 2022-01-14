@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Loading } from "../loading/Loading";
-import { api, token } from "../../services/api";
+import { api } from "../../services/api";
 import * as S from "./Styled";
 import ButtonsAT from "../button-livro/ButtonsAT";
 
