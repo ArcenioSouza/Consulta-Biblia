@@ -10,7 +10,7 @@ const Informacoes = ({info, setUpdateApi, updateApi}) => {
          .get(`books/${info.book.abbrev.pt}`)
          .then(response => setInfoLivro(response.data))
          .catch(erro => console.error('Problema na requisição '+erro))
-   }, [])
+   }, [updateApi])
 
    const handleMudarCapitulo = () => {
       const numeroCapitulo = document.querySelector('#capitulo').value

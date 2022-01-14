@@ -1,4 +1,6 @@
+import { api } from "../../services/api";
 import ButtonLivro from "./ButtonLivro";
+import { Link } from "react-router-dom";
 
 const ButtonsNT = ({livros}) => {
 
@@ -17,12 +19,13 @@ const ButtonsNT = ({livros}) => {
          {!!livros &&
             livros.map((livro, index) => {
                if(livro.testament === 'NT'){
-                  return <ButtonLivro 
-                  key={index}
+                  return <Link to="/leitura" key={index}>
+                  <ButtonLivro 
                   id={livro.abbrev.pt} 
                   name={livro.name} 
                   onclick={handleOnClick}
-                  />;
+               />
+               </Link>;
                }               
             })}
       </>

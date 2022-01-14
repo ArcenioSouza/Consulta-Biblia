@@ -12,8 +12,16 @@ const TelaLeitura = () => {
 
    useEffect(() => {
       setLeitura(JSON.parse(localStorage.getItem("clickLivro")));
-      setIsLoading(false);
    }, [updateApi]);
+
+   setTimeout(() => {
+      setUpdateApi(!updateApi)
+   }, [200])
+
+   setTimeout(() => {
+      setIsLoading(false);
+   }, [250])
+
 
    const handleProximoCapitulo = () => {
          const numeroCapitulo = leitura.chapter.number + 1

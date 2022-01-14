@@ -6,7 +6,6 @@ const ButtonsAT = ({livros}) => {
 
    const handleOnClick = (event) => {
       const abbrev = event.target.id
-      console.log(abbrev)
 
       api
          .get(`verses/nvi/${abbrev}/1`)
