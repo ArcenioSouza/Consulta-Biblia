@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 import * as S from './Styled.jsx'
 
 const Header = () => {
@@ -6,7 +7,7 @@ const Header = () => {
       <S.Container>
          <h1>Biblia Sagrada</h1>
          <ul>
-            <li>Página Inicial</li>
+            <li><Link to="/">Página Inicial</Link></li>
             <li>Anotações</li>
             <li>Colabore</li>
          </ul>
