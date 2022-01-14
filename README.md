@@ -20,3 +20,4 @@ Aplicativo de consulta a livros da biblia, onde poderá ser feito a leitura e de
 
  # Link do site
 
+[https://consulta-biblia.netlify.app/](https://consulta-biblia.netlify.app/)
