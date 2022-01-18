@@ -1,9 +1,9 @@
 import { Key } from "react";
 import { Link } from "react-router-dom";
-import { api } from "../../services/api";
-import { IEvento } from "../../types/evento";
-import { ILivros } from "../../types/livros";
-import ButtonLivro from "./ButtonLivro";
+import { api } from "../../../services/api";
+import { IEvento } from "../../../types/evento";
+import { ILivros } from "../../../types/livros";
+import ButtonLivro from "../ButtonLivro";
 
 interface Props {
    livros: ILivros[]

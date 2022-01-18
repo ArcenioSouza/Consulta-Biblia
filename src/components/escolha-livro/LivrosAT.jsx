@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Loading } from "../loading/Loading";
 import { api } from "../../services/api";
 import * as S from "./Styled";
-import ButtonsAT from "../button-livro/ButtonsAT";
+import ButtonsAT from "../button-livro/button-AT/ButtonsAT";
 
 const LivrosAT = () => {
    const [isLoading, setIsLoading] = useState(false);
