@@ -20,8 +20,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "removeComments": true,
-    "noImplicitAny": true,
     "noEmitOnError": true,
+    "downlevelIteration": true,
     "strictNullChecks": true
   },
   "include": [

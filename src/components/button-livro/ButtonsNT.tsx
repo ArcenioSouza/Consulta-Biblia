@@ -1,10 +1,16 @@
 import { api } from "../../services/api";
 import ButtonLivro from "./ButtonLivro";
 import { Link } from "react-router-dom";
+import { ILivros } from "../../types/livros";
+import { IEvento } from "../../types/evento";
 
-const ButtonsNT = ({livros}) => {
+interface Props {
+   livros: ILivros[]
+}
 
-   const handleOnClick = (event) => {
+const ButtonsNT = ({livros}: Props) => {
+
+   const handleOnClick = (event: IEvento) => {
       const abbrev = event.target.id
       console.log(abbrev)
 
@@ -23,7 +29,7 @@ const ButtonsNT = ({livros}) => {
                   <ButtonLivro 
                   id={livro.abbrev.pt} 
                   name={livro.name} 
-                  onclick={handleOnClick}
+                  onclick={() => handleOnClick}
                />
                </Link>;
                }               
