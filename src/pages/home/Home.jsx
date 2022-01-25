@@ -4,49 +4,37 @@ import MensagemDiaria from '../../components/mensagem-diaria/MensagemDiaria';
 import { api } from '../../services/api';
 import { useEffect, useState } from 'react';
 import { Loading } from '../../components/loading/Loading';
+import * as S from './Styled'
 
 
 const Home = () => {
 
-   const [isLoadingBook, setIsLoadingBook] = useState(true);
-   const [isLoadingVerse, setIsLoadingVerse] = useState(true);
    const [livros, setLivros] = useState([]);
    const [mensagemDiaria, setMensagemDiaria] = useState()
 
    useEffect(() => {
       api.get("books").then(livrosResp => {
          setLivros(livrosResp.data)   
-         setIsLoadingBook(false)    
       })
       api.get('verses/nvi/random').then(versoResp => {
-         setMensagemDiaria(versoResp.data) 
-         setIsLoadingVerse(false)        
+         setMensagemDiaria(versoResp.data)        
       })
    }, [])  
 
    return (
-      <>
-         {isLoadingVerse ? 
-            (<>
-               <Loading type="spin" color="#000"/>
-            </>)
-            : 
-            (<>
-               <MensagemDiaria verso={mensagemDiaria}/>
-            </>)
-         }
-
-         {isLoadingBook ? 
-            (<>
-               <Loading type="spin" color="#000"/>
-            </>)
-            : 
-            (<>
-               <LivrosAT livros={livros}/>
-               <LivrosNT livros={livros}/>
-            </>)
-         }        
-      </>
+   <>
+      { livros !== [] && mensagemDiaria !== undefined ?
+         <>
+            <MensagemDiaria verso={mensagemDiaria}/>   
+            <LivrosAT livros={livros}/>
+            <LivrosNT livros={livros}/>  
+         </>
+         :
+         <S.Container>
+            <Loading type="spin" color="#000"/>
+         </S.Container>
+      }                     
+   </>
    )
 }
 
