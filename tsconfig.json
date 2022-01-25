@@ -22,7 +22,7 @@
     "removeComments": true,
     "noEmitOnError": true,
     "downlevelIteration": true,
-    "strictNullChecks": true
+    "strictNullChecks": false
   },
   "include": [
     "src"
