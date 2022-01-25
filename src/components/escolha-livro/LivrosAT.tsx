@@ -7,7 +7,7 @@ interface Props {
 }
 
 const LivrosAT = ({livros}: Props) => {
-   console.log(livros)
+   
    return (
       <S.Container>         
          <div className="titulo">
@@ -15,9 +15,9 @@ const LivrosAT = ({livros}: Props) => {
             <h3>Antigo Testamento</h3>
          </div>
          <div className="livros">            
-            { livros.map((livro: any) => {
+            { livros.map((livro: any, index) => {
                if(livro.testament === "VT"){
-                  return <ButtonLivro id={livro.abbrev.pt} name={livro.name}/>
+                  return <ButtonLivro key={index} id={livro.abbrev.pt} name={livro.name}/>
                }
             })}            
          </div>      

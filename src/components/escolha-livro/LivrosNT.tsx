@@ -15,9 +15,9 @@ const LivrosNT = ({livros}: Props) => {
             <h3>Novo Testamento</h3>
          </div>
          <div className="livros">
-            { livros.map((livro: any) => {
+            { livros.map((livro: any, index) => {
                if(livro.testament === "NT"){
-                  return <ButtonLivro id={livro.abbrev.pt} name={livro.name}/>
+                  return <ButtonLivro key={index} id={livro.abbrev.pt} name={livro.name}/>
                }
             })}
          </div>           
