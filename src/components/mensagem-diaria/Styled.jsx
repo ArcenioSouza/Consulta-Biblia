@@ -9,7 +9,6 @@ export const Container = styled.div `
    justify-content: center;
    padding: 2%;
    font-family: var(--fontText);
-   background-color: #d9d9d9;
    border-bottom: 2px solid;
 
    div{

@@ -19,16 +19,28 @@ export const Container = styled.div `
    .versos{
       width: 100%;
       height: 100%;
-      background-color: #fff;
       overflow-y: scroll;
       border: 1px solid;
       text-align: justify;
       padding: 1%;
-   }
+
+      ::-webkit-scrollbar {
+         width: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+         background: var(--titleColor); 
+         -webkit-box-shadow: inset 0 0 6px rgba(36, 36, 36, 0.5); 
+      }
+
+      ::-webkit-scrollbar-thumb:window-inactive {
+         background: #bf613f80; 
+      }
+   }   
 
    .buttons{
       position: absolute;
-      bottom: 50px;
+      bottom: 40px;
       left: 30%;
    }
 

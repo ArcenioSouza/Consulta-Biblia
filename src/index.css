@@ -8,6 +8,10 @@
   --fontText: 'Merriweather', serif;
   --fontTitle: 'Island Moments', cursive;
   --fontSubtitle: 'Amaranth', sans-serif;
+
+  --backgroundColor: #3B3C40;
+  --titleColor: #BF613F;
+  --textColor: #F2E3B6;
 }
 
 *{
@@ -18,5 +22,41 @@
 
 body {
   width: 100%;
+  background-color: var(--backgroundColor);
+}
+
+h1{
+  color: var(--titleColor);
+}
+
+h2{
+  color: var(--titleColor);
+}
+
+h3{
+  color: var(--titleColor);
+}
+
+p{
+  color: var(--textColor);
+}
+
+li {
+  color: var(--textColor);
+}
+
+label {
+  color: var(--titleColor);
+}
+
+button {
+  background-color: var(--backgroundColor);
+  border-color: var(--textColor);
+  color: var(--textColor)
+}
+
+button:hover{
+  background-color: var(--titleColor);
+  cursor: pointer;
 }
 

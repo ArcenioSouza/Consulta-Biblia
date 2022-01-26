@@ -7,7 +7,7 @@ const Header = () => {
       <S.Container>
          <h1>Biblia Sagrada</h1>
          <ul>
-            <li><Link to="/">Página Inicial</Link></li>
+            <Link to="/"><li>Página Inicial</li></Link>
             <li>Anotações</li>
             <li>Colabore</li>
          </ul>
