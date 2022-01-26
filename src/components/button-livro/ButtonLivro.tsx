@@ -15,7 +15,8 @@ const ButtonLivro = ({id, name}: Props) => {
       .catch(e => console.log(e.message))
 
       setTimeout(() => {
-         window.location.href = "http://localhost:3000/leitura"
+         const href = window.location.href
+         window.location.href = `${href}leitura`
       }, 500)
    }
    
