@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
-import { InfoLivro } from "../../types/infoLivro";
 import { ILeitura } from "../../types/leitura";
+import { ILivros } from "../../types/livros";
 import { Loading } from "../loading/Loading";
 import * as S from "./Styled";
 
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const Informacoes = ({info, setUpdateApi, updateApi}: Props) => {
-   const [infoLivro, setInfoLivro] = useState<InfoLivro>()
+   const [infoLivro, setInfoLivro] = useState<ILivros>()
    const [isLoading, setIsLoading] = useState(true);
 
    useEffect(() => {
@@ -25,7 +25,7 @@ const Informacoes = ({info, setUpdateApi, updateApi}: Props) => {
          .catch(erro => console.error('Problema na requisição '+erro))
    }, [updateApi])
 
-   const handleMudarCapitulo = () => {
+   function handleMudarCapitulo(): void {
       const numeroCapitulo = (document.querySelector('#capitulo') as HTMLInputElement).value
 
       api

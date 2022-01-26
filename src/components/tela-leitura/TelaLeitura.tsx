@@ -1,13 +1,14 @@
 import Versos from "../versos/Versos";
 import * as S from "./Styled";
 import { useEffect, useState } from "react";
-import { Loading } from "../../components/loading/Loading";
+import { Loading } from "../loading/Loading";
 import Informacoes from "../informacoes/Informacoes";
 import { api } from "../../services/api";
+import { ILeitura } from "../../types/leitura";
 
 const TelaLeitura = () => {
    const [isLoading, setIsLoading] = useState(true);
-   const [leitura, setLeitura] = useState();
+   const [leitura, setLeitura] = useState<ILeitura>();
    const [updateApi, setUpdateApi] = useState(false)
 
    useEffect(() => {
@@ -25,7 +26,10 @@ const TelaLeitura = () => {
                localStorage.setItem('clickLivro', JSON.stringify(response.data))
                setUpdateApi(!updateApi)
             })
-            .catch(erro => console.error('Problema na requisição '+erro))               
+            .catch((erro) => {
+               alert("Não exite capítulos posteriores a esse!!")
+               console.error('Problema na requisição '+erro)               
+            })               
    }
 
    const handleCapituloAnterior = () => {

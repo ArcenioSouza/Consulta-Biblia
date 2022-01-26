@@ -5,11 +5,12 @@ import { api } from '../../services/api';
 import { useEffect, useState } from 'react';
 import { Loading } from '../../components/loading/Loading';
 import * as S from './Styled'
+import { ILivros } from '../../types/livros';
 
 
 const Home = () => {
 
-   const [livros, setLivros] = useState([]);
+   const [livros, setLivros] = useState<ILivros[]>();
    const [mensagemDiaria, setMensagemDiaria] = useState()
 
    useEffect(() => {
